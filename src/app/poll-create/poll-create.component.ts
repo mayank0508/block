@@ -17,4 +17,8 @@ this.pollForm =this.fb.group({
   option3: this.fb.control('',),
 })
 }
+
+submitForm(){
+  console.log(this.pollForm.value)
+}
 }
