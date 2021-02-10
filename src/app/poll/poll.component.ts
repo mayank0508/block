@@ -13,15 +13,14 @@ export class PollComponent implements OnInit {
 
 numberOfVotes: number;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     if(this.votes.length) {
       this.numberOfVotes = this.votes.reduce((acc, curr) => {
         return (acc += curr);
       });
     }
-   }
-
-  ngOnInit(): void {
   }
 
 }
