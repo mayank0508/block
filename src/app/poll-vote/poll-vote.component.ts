@@ -13,7 +13,7 @@ export class PollVoteComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
      this.voteForm = this.fb.group({
-       selected: this.fb.control("", [Validators.required])
+       selected: this.fb.control("", [Validators.required]),
      });
    }
 
