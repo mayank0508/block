@@ -4,11 +4,11 @@
      </div>
      <div class="card-body">
       <p class="card-text text-truncate fw-bolder">
-          Do you like cats or dogs ?
+         {{ question }}
       </p>
       <div class="d-flex justify-content-between">
-          <small class="text-muted">10 Votes</small>
-          <small class="text-muted">Votes</small>
+          <small class="text-muted">{{ numberOfVotes }}</small>
+          <small *ngIf="voted" class="badge bg-danger">voted</small>
       </div>
      </div>
  </div>

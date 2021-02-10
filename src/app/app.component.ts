@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showForm =false;
+
+  poll = {
+    question: "do you like dog or cats ?",
+    votes: [0, 5 ,7, 1],
+    voted: true,
+  };
 }

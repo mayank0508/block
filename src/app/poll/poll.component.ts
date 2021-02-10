@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-poll',
@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollComponent implements OnInit {
 
-  constructor() { }
+@Input() question: string;
+@Input() votes: number[];
+@Input() voted: boolean;
+
+numberOfVotes: number;
+
+  constructor() {
+    if(this.votes.length) {
+      this.numberOfVotes = this.votes.reduce((acc, curr) => {
+        return (acc += curr);
+      });
+    }
+   }
 
   ngOnInit(): void {
   }
