@@ -10,6 +10,7 @@ export class PollComponent implements OnInit {
 @Input() question: string;
 @Input() votes: number[];
 @Input() voted: boolean;
+@Input() pollImage: string;
 
 numberOfVotes: number;
 
