@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import ApexCharts from 'apexcharts';
 
 @Component({
   selector: 'app-poll-vote',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PollVoteComponent implements OnInit {
 
-  options = ['MOnday', 'Tuesday', 'Wedneaday'];
+  options = ['Monday', 'Tuesday', 'Wedneaday'];
   voteForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -22,5 +23,9 @@ export class PollVoteComponent implements OnInit {
 
   submitForm(){
     console.log(this.voteForm.value);
+  }
+
+  generateChart() {
+    
   }
 }
