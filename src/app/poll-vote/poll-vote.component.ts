@@ -26,7 +26,31 @@ export class PollVoteComponent implements OnInit {
   }
 
   generateChart() {
+    const options: ApexCharts.ApexOptions = {
+      series: [{
+      data: [0,0,0],
+    }],
+      chart: {
+      type: 'bar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    xaxis: {
+      categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+        'United States', 'China', 'Germany'
+      ],
+    }
+    };
 
-    
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
   }
 }
