@@ -26,6 +26,7 @@ export class PollVoteComponent implements OnInit {
   }
 
   generateChart() {
+
     
   }
 }
