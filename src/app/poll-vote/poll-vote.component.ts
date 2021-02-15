@@ -48,3 +48,4 @@ export class PollVoteComponent implements OnInit {
     },
     };
 }
+}
