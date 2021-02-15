@@ -36,21 +36,15 @@ export class PollVoteComponent implements OnInit {
     },
     plotOptions: {
       bar: {
-        horizontal: true,
-        
-      }
+        columnWidth: '45%',
+        distributed: true,
+      },
     },
-    dataLabels: {
-      enabled: false
+    legend: {
+      show: false,
     },
     xaxis: {
-      categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-        'United States', 'China', 'Germany'
-      ],
-    }
+      categories: ['Monday', 'Tuesday', 'Wednesday'],
+    },
     };
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-  }
 }
