@@ -31,6 +31,10 @@ export class AppComponent {
 
 
 setActivePoll(poll){
-  this.activePoll = poll;
+  this.activePoll = null;
+
+  setTimeout(() =>{
+    this.activePoll = poll;
+  }, 100);
  }
 }
