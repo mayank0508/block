@@ -19,7 +19,9 @@ export class PollVoteComponent implements OnInit {
    }
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.generateChart();
+  }
 
   submitForm(){
     console.log(this.voteForm.value);
@@ -47,5 +49,7 @@ export class PollVoteComponent implements OnInit {
       categories: ['Monday', 'Tuesday', 'Wednesday'],
     },
     };
-}
+   const chart = new ApexCharts(document.getElementById('poll-results'), options);
+   chart.render()
+ }
 }
