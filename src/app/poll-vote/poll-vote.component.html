@@ -1,4 +1,4 @@
-<h3>Poll question tittle</h3>
+<h3>{{ question }}</h3>
 
 <form *ngIf="!voted" [formGroup]="voteForm" (ngSubmit)="submitForm()">
   <div class="form-check" *ngFor="let opt of options; let i = index">

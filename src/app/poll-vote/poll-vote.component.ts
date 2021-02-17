@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import ApexCharts from 'apexcharts';
+import { INSPECT_MAX_BYTES } from 'buffer';
 
 @Component({
   selector: 'app-poll-vote',
@@ -12,6 +13,7 @@ export class PollVoteComponent implements OnInit {
   @Input() voted: boolean;
   @Input() options: string[];
   @Input() results: number[];
+  @Input() question: string;
 
   voteForm: FormGroup;
 
