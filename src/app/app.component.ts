@@ -11,10 +11,11 @@ export class AppComponent {
   showForm =false;
   activePoll: Poll = null;
 
-  polls = this.ps.getPolls()
+  polls = this.ps.getPolls();
 
-  constructor(private ps: PollService)
+  constructor(private ps: PollService){
 
+  }
 
 setActivePoll(poll){
   this.activePoll = null;
